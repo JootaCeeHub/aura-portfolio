@@ -1,14 +1,14 @@
 # AURA
 
-> **Curated public portfolio version.** This repository is a sanitized, non-production showcase extracted from the private source (`AURA, aura-core-architect`). It intentionally excludes infrastructure, configuration, credentials, and internal history.
+> **Curated public portfolio version.** This repository is a sanitized, non-production showcase extracted from 2 private source repositoryies. It intentionally excludes infrastructure, configuration, credentials, and internal history.
 
-**AI orchestration & automation framework**
+**Autonomous intelligence ecosystem — agent orchestration & code intelligence**
 
-**Version:** 1.0.0 · **Year:** 2026 · **Status:** ACTIVE
+**Version:** 2.1.0 · **Year:** 2026 · **Status:** ACTIVE
 
 ## Overview
 
-AURA is a modular cognitive automation framework that combines AI agents, specialized roles, distributed architecture, and enterprise automation in one ecosystem. Includes real-time dashboards, JWT/RBAC security, a CLI toolchain, and an MCP ingestor.
+AURA is a family of AI systems built around two private source components: an agent-orchestration runtime and a code-intelligence studio. It covers multi-agent orchestration, an MCP server/tool registry, automation connectors, security (JWT/RBAC/rate-limit), observability, and a 6-layer code-governance architecture.
 
 ## Architecture
 
@@ -16,11 +16,11 @@ The codebase follows a component-based architecture with typed domain models and
 
 ## Tech Stack
 
-TypeScript · Node.js · WebSocket · MCP · JWT · RBAC · Docker
+TypeScript · Node.js · Express · WebSocket · MCP · PostgreSQL · Redis · React · Vite · Supabase
 
 ## Key Features
 
-- `orchestration` · `agents` · `mcp` · `automation`
+- `orchestration` · `agents` · `mcp` · `code-intelligence` · `governance` · `automation`
 
 ## Project Status
 
@@ -31,7 +31,6 @@ TypeScript · Node.js · WebSocket · MCP · JWT · RBAC · Docker
 - Typed TypeScript architecture with reusable component system
 - Client-first product experience with service abstractions for future backends
 - Modern build tooling and code-quality conventions
-- Verified with tests where included in this showcase
 
 ## Portfolio Context
 

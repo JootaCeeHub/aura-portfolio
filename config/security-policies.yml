@@ -1,0 +1,66 @@
+version: "1.0.0"
+
+roles:
+  ADMIN:
+    description: "Control total del ecosistema AURA-MCP"
+    scopes:
+      - mcp:core:admin
+      - mcp:modules:manage
+      - mcp:security:manage
+      - mcp:observability:full
+  OPERATIONS:
+    description: "Operación diaria de flujos y herramientas"
+    scopes:
+      - mcp:core:invoke
+      - mcp:modules:invoke
+      - mcp:observability:read
+  AUDITOR:
+    description: "Revisión de logs, trazabilidad y cumplimiento"
+    scopes:
+      - mcp:observability:read
+      - mcp:logs:read
+      - mcp:reports:read
+  VIEWER:
+    description: "Acceso de solo lectura a estado general"
+    scopes:
+      - mcp:status:read
+
+logging:
+  provider: "supabase"
+  level: "info"
+  retention_days: 365
+  audit_trail:
+    enabled: true
+    include:
+      - "tool_invocations"
+      - "security_events"
+      - "config_changes"
+
+security:
+  auth:
+    strategy: "token"
+    allowed_tokens:
+      - "AURA_INTERNAL_TOKEN_DEV"
+  data_protection:
+    dlp_enabled: true
+    kms_enabled: true
+  network:
+    allowed_origins:
+      - "http://localhost:3000"
+      - "http://localhost:5678"
+      - "https://aura.solinprimejc.com"
+      - "https://aura-core.solinprimejc.com"
+    allowed_internal_services:
+      - "mcp-n8n-workflows"
+      - "mcp-graphiti-kg"
+      - "mcp-rag-hybrid"
+      - "mcp-tavily-web"
+
+observability:
+  error_budget:
+    enabled: true
+    target_uptime: "99.0"
+  alerts:
+    critical_channels:
+      - "email:ops@primejc.cl"
+      - "slack:#aura-alertas"

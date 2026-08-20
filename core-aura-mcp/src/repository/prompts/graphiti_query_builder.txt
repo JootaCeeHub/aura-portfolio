@@ -1,0 +1,8 @@
+Construye consultas Graphiti claras, eficientes y semánticas.
+Formato esperado:
+
+- Nodo objetivo
+- Relaciones
+- Filtros
+- Profundidad
+- Resultado esperado

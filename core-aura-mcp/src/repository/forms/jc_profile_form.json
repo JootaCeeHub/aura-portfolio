@@ -1,0 +1,18 @@
+{
+  "form_name": "JC Professional Profile Form",
+  "fields": [
+    {
+      "name": "full_name",
+      "type": "text",
+      "default": "Johan Contreras Ramírez"
+    },
+    {
+      "name": "roles",
+      "type": "textarea"
+    },
+    {
+      "name": "skills",
+      "type": "textarea"
+    }
+  ]
+}

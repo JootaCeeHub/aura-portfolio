@@ -1,0 +1,22 @@
+{
+  "form_name": "Scraping Job Request",
+  "fields": [
+    {
+      "name": "target_url",
+      "type": "text"
+    },
+    {
+      "name": "selectors",
+      "type": "textarea"
+    },
+    {
+      "name": "requires_dynamic_render",
+      "type": "boolean"
+    },
+    {
+      "name": "antibot_level",
+      "type": "select",
+      "options": ["low", "medium", "high"]
+    }
+  ]
+}

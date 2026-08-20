@@ -1,0 +1,29 @@
+[
+    {
+        "name": "mcp-n8n-workflows",
+        "url": "http://localhost:3001",
+        "scopes": [
+            "automation",
+            "workflows"
+        ],
+        "status": "inactive"
+    },
+    {
+        "name": "mcp-graphiti-kg",
+        "url": "http://localhost:3002",
+        "scopes": [
+            "kg",
+            "context"
+        ],
+        "status": "inactive"
+    },
+    {
+        "name": "mcp-rag-hybrid",
+        "url": "http://localhost:3003",
+        "scopes": [
+            "rag",
+            "retrieval"
+        ],
+        "status": "inactive"
+    }
+]

@@ -1,0 +1,78 @@
+{
+    "version": "1.0.0",
+    "environment": "dev",
+    "auraIdentity": {
+        "name": "AURA",
+        "description": "Asistente Universal de Resolución Avanzada orquestado por MCP.",
+        "owner": "Soluciones Industriales Prime JC SpA"
+    },
+    "systemPrompt": {
+        "base": "AURA es un orquestador maestro que coordina múltiples módulos MCP para entregar soluciones estratégicas, auditables y alineadas con los objetivos del negocio.",
+        "objectives": [
+            "Facilitar la implementación personalizada por organización",
+            "Optimizar la interacción intermodular",
+            "Garantizar la seguridad, la mejora continua y la trazabilidad E2E",
+            "Impulsar innovación y adaptabilidad estratégica"
+        ],
+        "constraints": [
+            "No saltarse las políticas de seguridad definidas",
+            "No ejecutar acciones críticas sin contexto suficiente",
+            "Respetar los límites de cada módulo y sus scopes"
+        ]
+    },
+    "modules": {
+        "core": {
+            "name": "aura-mcp-core",
+            "description": "Orquestador Estratégico de Coordinación y Sinergia Intermodular",
+            "features": [
+                "routing_inteligente",
+                "descubrimiento_mcp",
+                "gobernanza_y_seguridad",
+                "observabilidad",
+                "gestion_feedback"
+            ]
+        },
+        "automation": {
+            "enabled": true,
+            "description": "Módulo de Automatización Extendida: n8n, Zapier, Power Automate",
+            "providers": [
+                "n8n",
+                "zapier",
+                "power_automate"
+            ]
+        },
+        "governanceSecurity": {
+            "enabled": true,
+            "description": "Módulo de Gobernanza y Seguridad",
+            "policiesFile": "config/security-policies.yml"
+        },
+        "taxAndBenefitsCL": {
+            "enabled": true,
+            "description": "Módulo Tributario & Beneficios (Chile)",
+            "kpiSource": "supabase",
+            "automationFlows": [
+                "AlertasTributarias.run",
+                "CierreMensualTributario.run"
+            ]
+        }
+    },
+    "observability": {
+        "enabled": true,
+        "provider": "supabase",
+        "metrics": [
+            "latencia_mcp",
+            "errores_por_modulo",
+            "llamadas_por_scope"
+        ]
+    },
+    "security": {
+        "roles": [
+            "ADMIN",
+            "OPERATIONS",
+            "AUDITOR",
+            "VIEWER"
+        ],
+        "defaultRole": "VIEWER",
+        "policiesFile": "config/security-policies.yml"
+    }
+}

@@ -1,0 +1,6 @@
+
+> aura-mcp-core@1.0.0 typecheck
+> tsc --noEmit
+
+src/lib/storage.ts(1,84): error TS2307: Cannot find module '@aws-sdk/client-s3' or its corresponding type declarations.
+src/lib/storage.ts(88,42): error TS7006: Parameter 'obj' implicitly has an 'any' type.

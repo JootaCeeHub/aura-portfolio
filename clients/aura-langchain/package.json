@@ -1,0 +1,21 @@
+{
+    "name": "aura-langchain-client",
+    "version": "0.1.0",
+    "description": "Cliente AURA basado en LangChain que se conecta al AURA-MCP-Core.",
+    "main": "src/auraAgent.ts",
+    "type": "module",
+    "scripts": {
+        "start": "node --loader ts-node/esm src/auraAgent.ts",
+        "dev": "nodemon --watch src --ext ts --exec \"node --loader ts-node/esm src/auraAgent.ts\""
+    },
+    "dependencies": {
+        "axios": "^1.6.2",
+        "langchain": "^0.2.0",
+        "openai": "^4.0.0",
+        "ts-node": "^10.9.1"
+    },
+    "devDependencies": {
+        "typescript": "^5.4.0",
+        "nodemon": "^3.0.1"
+    }
+}

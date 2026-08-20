@@ -1,0 +1,26 @@
+{
+  "form_name": "Automation Request",
+  "fields": [
+    {
+      "name": "workflow_name",
+      "type": "text"
+    },
+    {
+      "name": "trigger",
+      "type": "text"
+    },
+    {
+      "name": "input_data",
+      "type": "textarea"
+    },
+    {
+      "name": "output_expected",
+      "type": "textarea"
+    },
+    {
+      "name": "criticality",
+      "type": "select",
+      "options": ["baja", "media", "alta"]
+    }
+  ]
+}

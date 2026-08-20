@@ -1,0 +1,122 @@
+{
+  "mcpVersion": "1.0",
+  "name": "aura-mcp-core",
+  "description": "Orquestador maestro del ecosistema AURA-MCP. Gestiona el ruteo, registro, seguridad, políticas y comunicación entre todos los MCPs.",
+  "version": "0.1.0",
+  "tools": [
+    {
+      "name": "core.get_status",
+      "description": "Devuelve el estado del AURA-MCP-Core.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string"
+          },
+          "registeredModules": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "core.list_servers",
+      "description": "Lista todos los MCP registrados en el ecosistema AURA.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "servers": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "core.route_tool",
+      "description": "Orquesta una llamada a un módulo MCP específico según configuración del registrador.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "server": {
+            "type": "string"
+          },
+          "tool": {
+            "type": "string"
+          },
+          "args": {
+            "type": "object"
+          }
+        },
+        "required": ["server", "tool"]
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "result": {}
+        }
+      }
+    },
+    {
+      "name": "core.route_intent",
+      "description": "Orquesta una llamada a un módulo MCP usando intención de alto nivel.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "intent": {
+            "type": "string"
+          },
+          "tool": {
+            "type": "string"
+          },
+          "args": {
+            "type": "object"
+          }
+        },
+        "required": ["intent", "tool"]
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "result": {},
+          "error": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "core.registry",
+      "description": "Recurso que expone el registro actual de MCPs activos.",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "modules": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

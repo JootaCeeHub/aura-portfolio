@@ -1,0 +1,22 @@
+{
+  "form_name": "Client Intake Form",
+  "fields": [
+    {
+      "name": "company_name",
+      "type": "text"
+    },
+    {
+      "name": "contact_email",
+      "type": "email"
+    },
+    {
+      "name": "project_type",
+      "type": "select",
+      "options": ["Automatización", "IA", "Scraping", "Consultoría"]
+    },
+    {
+      "name": "requirements",
+      "type": "textarea"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+
+> aura-mcp-core@1.0.0 typecheck
+> tsc --noEmit
+
+src/lib/auditLog.ts(1,26): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './database.js'?
+src/lib/auditLog.ts(2,24): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './logger.js'?
+src/lib/authTokens.ts(3,24): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './logger.js'?
+src/lib/cache.ts(3,24): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './logger.js'?
+src/lib/database.ts(45,35): error TS2344: Type 'T' does not satisfy the constraint 'QueryResultRow'.
+src/lib/database.ts(53,35): error TS2344: Type 'T' does not satisfy the constraint 'QueryResultRow'.
+src/lib/encryption.ts(2,24): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './logger.js'?
+src/lib/eventBus.ts(3,24): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './logger.js'?
+src/lib/observability.ts(3,24): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './logger.js'?
+src/lib/rateLimiter.ts(1,24): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './logger.js'?
+src/lib/secretsVault.ts(1,24): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './logger.js'?
+src/lib/storage.ts(1,84): error TS2307: Cannot find module '@aws-sdk/client-s3' or its corresponding type declarations.
+src/lib/storage.ts(3,24): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './logger.js'?
+src/lib/storage.ts(88,42): error TS7006: Parameter 'obj' implicitly has an 'any' type.
+src/lib/validation.ts(2,24): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './logger.js'?
+src/mcp/mcpImporter.ts(3,24): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../lib/logger.js'?
+src/repositories/agentRepository.ts(1,26): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../lib/database.js'?
+src/repositories/agentRepository.ts(2,23): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../lib/cache.js'?
+src/repositories/agentRepository.ts(3,24): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../lib/logger.js'?
+src/repositories/agentRepository.ts(4,38): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../lib/agentFactory.js'?
+src/repositories/agentRepository.ts(47,52): error TS7006: Parameter 'a' implicitly has an 'any' type.
+src/repositories/eventRepository.ts(1,26): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../lib/database.js'?
+src/repositories/eventRepository.ts(2,24): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../lib/logger.js'?
+src/repositories/eventRepository.ts(3,34): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../lib/eventBus.js'?
+src/repositories/eventRepository.ts(37,23): error TS7006: Parameter 'r' implicitly has an 'any' type.
+src/repositories/eventRepository.ts(51,23): error TS7006: Parameter 'r' implicitly has an 'any' type.
+src/repositories/eventRepository.ts(65,23): error TS7006: Parameter 'r' implicitly has an 'any' type.
+src/tools/coreTools.ts(78,45): error TS2345: Argument of type 'Promise<MCPRegistryEntry | undefined>' is not assignable to parameter of type 'MCPRegistryEntry'.
+  Type 'Promise<MCPRegistryEntry | undefined>' is missing the following properties from type 'MCPRegistryEntry': name, url, scopes
